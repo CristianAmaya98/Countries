@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    padding: .5rem;
+    background-color: var(--ElementTheme);
+    box-shadow: 0 0 1px var(--BorderTheme);
+    color: var(--Texto);
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    font-weight: 800;
+}
+
+.modo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.text {
+    font-weight: 600;
+    font-size: 1.6rem;
+}

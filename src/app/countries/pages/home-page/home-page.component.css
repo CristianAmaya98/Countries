@@ -1,0 +1,44 @@
+.contenido-section {
+    margin: 4rem 0;
+}
+
+
+.filtros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+.contenedor-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--ElementTheme);
+    box-shadow: 0 0 3px var(--BorderTheme);
+    color: var(--Texto);
+    padding: 0 2rem;
+}
+
+
+.contenedor-input input {
+    width: 25rem;
+}
+
+.contenedor-input span {
+    color: var(--Texto);
+}
+
+
+.select-input {
+    padding: 0;
+}
+
+/** Section Principal **/
+.main-grid-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6rem;
+}

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlServicio: 'https://restcountries.com/v3.1'
 };

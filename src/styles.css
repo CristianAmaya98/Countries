@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --FontsPrimario: 'Nunito Sans', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+
+.darkTheme {
+    --FondoTheme: hsl(207, 26%, 17%);
+    --BorderTheme: hsl(200, 15%, 8%);
+    --ElementTheme: hsl(209, 23%, 22%);
+    --Texto: hsl(0, 0%, 100%);
+}
+
+.lightTheme {
+    --FondoTheme: hsl(0, 0%, 100%);
+    --BorderTheme: hsl(0, 0%, 52%);
+    --ElementTheme: hsl(0, 0%, 98%);
+    --Texto: hsl(200, 15%, 8%);
+}
+
+
+body {
+    font-size: 1.2rem;
+    font-family: var(--FontsPrimario);
+    background-color: var(--FondoTheme);
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenedor {
+    width: 85%;
+    min-width: 100rem;
+    margin: 0 auto;
+}
+
+/** Utilidad **/
+.input {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    color: var(--Texto);
+    background-color: var(--ElementTheme);
+}
+
+
+
+
+.input::placeholder {
+    color: var(--Texto);
+}
+
+
+.card {
+    background-color: var(--ElementTheme);
+    box-shadow: 0 0 4px var(--BorderTheme);
+    border-radius: .6rem;
+    color: var(--Texto);
+    overflow: hidden;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.pointer {
+    cursor: pointer;
+}

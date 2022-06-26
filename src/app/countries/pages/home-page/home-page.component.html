@@ -1,0 +1,29 @@
+<app-menu (themeMode)="setMode($event)"></app-menu>
+
+<section class="contenedor">
+    <div class="contenido-section filtros">
+        <div class="contenedor-input">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <input class="input" type="text" placeholder="Search for a country...">
+        </div>
+        <div class="contenedor-input select-input">
+
+            <select class="input" name="regiones" #selectRegion id="" (change)="obtenerCountries(selectRegion.value)">
+                <option value="#" disabled selected>Filter by Region</option>
+                <option value="todo">Todas los países</option>
+                <option *ngFor="let region of regiones" [value]="region">{{ region |
+                    titlecase }}</option>
+            </select>
+
+        </div>
+    </div>
+
+    <main class=" main-grid-section">
+        <div *ngFor="let country of countries">
+            <app-card [country]="country"></app-card>
+        </div>
+
+    </main>
+</section>

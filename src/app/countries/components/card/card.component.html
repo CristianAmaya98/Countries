@@ -1,0 +1,14 @@
+<div class="card pointer" [routerLink]="['/countries/detalle', 123]">
+    <div class="contenedor-imagen">
+        <img [src]="country.flags.svg! | verifcarImagen" alt="">
+    </div>
+    <div class="contenedor-info">
+        <h3>{{country.name.common}}</h3>
+
+        <div>
+            <p class="text-bold">Population: <span>{{ country.population }}</span></p>
+            <p class="text-bold">Region: <span>{{ country.region}}</span></p>
+            <p class="text-bold">Capital: <span>{{country.capital}}</span></p>
+        </div>
+    </div>
+</div>
