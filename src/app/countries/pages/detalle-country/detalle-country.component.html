@@ -1,1 +1,51 @@
-<p>detalle-country works!</p>
+<section class="contenedor contenido-detalle">
+
+    <div>
+        <button class="input btn-flexbox" routerLink="/countries">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+            Back
+        </button>
+    </div>
+
+    <div class="contenido-grid">
+
+        <div class="contenido-imagen">
+            <img [src]="country?.flags?.svg" alt="">
+        </div>
+        <div class="contenido-info">
+            <h2>{{ country?.name?.common | titlecase}}</h2>
+            <div class="texto-info flex-container">
+                <ul>
+                    <li>
+                        Native Name: <span>{{ nativeName?.common | titlecase }}</span>
+                    </li>
+                    <li>
+                        Population: <span>{{ country?.population | number}}</span>
+                    </li>
+                    <li>
+                        Region: <span>{{ country?.region }}</span>
+                    </li>
+                    <li>
+                        Sub Region: <span>{{ country?.subregion }}</span>
+                    </li>
+                    <li>
+                        Capital: <span>{{ country?.capital }}</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Top Level Domain: <span>{{ country?.tld }}</span>
+                    </li>
+                    <li>
+                        Currencies: <span>{{ currencies | titlecase }}</span>
+                    </li>
+                    <li>
+                        Languages: <span>{{ languages | titlecase }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  urlServicio: 'https://restcountries.com/v3.1'
+  urlServicio: 'https://restcountries.com/v3.1',
+  themes: ['lightTheme', 'darkTheme']
 };
 
 /*

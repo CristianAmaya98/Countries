@@ -21,8 +21,7 @@ import { ImagenPipe } from './pipes/imagen.pipe';
   ],
   imports: [
     CommonModule,
-    CountriesRoutingModule,
-    SharedModule
+    CountriesRoutingModule
   ]
 })
 export class CountriesModule { }

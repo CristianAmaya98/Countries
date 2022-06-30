@@ -18,18 +18,16 @@
     font-weight: 800;
 }
 
-.modo {
+.modos {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.icon {
-    width: 25px;
-    height: 25px;
-}
-
-.text {
     font-weight: 600;
-    font-size: 1.6rem;
+    gap: .5rem;
+    font-size: 1.3rem;
+}
+
+
+.modos span {
+    font-size: 1.7rem;
 }
