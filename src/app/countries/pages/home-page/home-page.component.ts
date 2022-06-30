@@ -32,11 +32,6 @@ export class HomePageComponent extends BaseComponent implements OnInit {
   }
 
 
-  setMode(theme: string) {
-    this.toogleModoOscuro(theme)
-  }
-
-
 
   obtenerCountries(region: string) {
     this.countriesService.getCountriesRegion(region);

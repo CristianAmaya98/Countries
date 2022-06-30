@@ -1,5 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { delay, Observable, tap, switchMap, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Country } from '../interfaces/country.interface';
 
@@ -12,6 +13,7 @@ export class CountriesService {
   private _regiones: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
 
   private _contries !: Country[];
+
   private url: string = environment.urlServicio;
 
 
@@ -49,5 +51,14 @@ export class CountriesService {
     const params = this._getConfigParams();
     this._http.get<Country[]>(`${this.url}/region/${region}`, { params })
       .subscribe(dataRegionCountries => this._contries = dataRegionCountries);
+  }
+
+  getContryCode(code: string): Observable<Country> {
+    return this._http.get<Country[]>(`${this.url}/alpha/${code}`)
+      .pipe(
+        map(dataCountries => {
+          return dataCountries[0]
+        })
+      );
   }
 }
