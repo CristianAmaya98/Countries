@@ -36,15 +36,21 @@ body {
 }
 
 
+
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
+
+
+
+
 .contenedor {
     width: 85%;
-    min-width: 100rem;
+    max-width: 100rem;
     margin: 0 auto;
 }
 

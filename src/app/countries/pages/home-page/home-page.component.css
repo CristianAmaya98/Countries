@@ -5,11 +5,18 @@
 
 .filtros {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    row-gap: 2rem;
     justify-content: space-between;
 }
 
-
+@media (min-width: 768px) {
+    .filtros {
+        flex-direction: row;
+        row-gap: unset;
+        justify-content: space-between;
+    }
+}
 
 
 .contenedor-input {
@@ -24,7 +31,14 @@
 
 
 .contenedor-input input {
-    width: 25rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenedor-input input {
+        width: 25rem;
+    }
+
 }
 
 .contenedor-input span {
@@ -38,7 +52,15 @@
 
 /** Section Principal **/
 .main-grid-section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .main-grid-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6rem;
+    }
 }
